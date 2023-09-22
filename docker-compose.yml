@@ -23,6 +23,8 @@ services:
       - ./cloudreve/avatar:/cloudreve/avatar
     depends_on:
       - aria2
+    environment:
+      - SQL_DSN=root:123456@tcp(host.docker.internal:3306)/one-ap
 
   aria2:
     container_name: aria2
